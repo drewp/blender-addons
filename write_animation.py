@@ -32,7 +32,7 @@ class WriteAnimation(bpy.types.Operator):
         render.image_settings.file_format = 'FFMPEG'
         render.ffmpeg.format = 'WEBM'
         render.ffmpeg.codec = 'WEBM'
-        render.ffmpeg.constant_rate_factor = 'HIGH'
+        render.ffmpeg.constant_rate_factor = 'PERC_LOSSLESS'
         render.image_settings.color_mode = 'RGBA'
         bpy.ops.render.render('INVOKE_DEFAULT', animation=True)
 
