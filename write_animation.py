@@ -3,7 +3,7 @@ from pathlib import Path
 
 bl_info = {
     "name": "Write animation",
-    "blender": (2, 80, 0),
+    "blender": (2, 91, 0),
     "location": "Render > Write animation",
 }
 
@@ -12,6 +12,9 @@ class WriteAnimation(bpy.types.Operator):
     """Write a new webm next to the blend file"""
     bl_idname = "render.write_animation" # Unique identifier for buttons and menu items to reference.
     bl_label = "Write animation" # Display name in the interface.
+    bl_space_type = 'PROPERTIES'
+    bl_region_type = 'WINDOW'
+    bl_context = "output"
     bl_options = {'REGISTER'}
 
     def execute(self, context):
